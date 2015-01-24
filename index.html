@@ -5,19 +5,26 @@
   <title>GeoJSON to GPX</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <script src='togpx.js'></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
 
 <script>
   
-  function convertFile() {
-    var inputData = document.getElementById("inputFile").value;
-    console.log(inputData);
-    
-    var gpxData = togpx(inputData);
-    console.log(gpxData);
-    
+function convertFile() {
+  var inputFile = document.getElementById("inputFile").value;
+  console.log(inputFile);
+  
+  var GeoJSON_Data;
+  
+  $.getJSON(inputFile, function(response){
+     GeoJSON_Data = response;
+     console.log(GeoJSON_Data);
+  })
+  
+  var gpxData = togpx(inputData);
+  console.log(gpxData);
   }
   
 </script>
@@ -30,7 +37,7 @@
     <p class="help-block">Browse for your GeoJSON file.</p>
   </div>
   <button class="btn btn-default" onclick="convertFile();" type="submit" id="submit">Convert File</button>
-  <p>5:44 pm</p>
+  <p>6:17 pm</p>
 </div>
 
 </body>
