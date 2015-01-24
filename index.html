@@ -13,10 +13,10 @@
 <script>
   
 function convertFile() {
-  var inputFile = document.getElementById("inputFile").value;
-  console.log(inputFile);
+  var inputDataString = document.getElementById("geojsonText").value;
+  console.log(inputData);
   
-  var inputData = $.getJSON(inputFile);
+  var inputData = $.getJSON(inputDataString);
   
   var gpxData = togpx(inputData);
   console.log(gpxData);
@@ -27,10 +27,7 @@ function convertFile() {
 <div class="container">
   <h1>Convert GeoJSON to GPX</h1>
   <p>Built with <a href="https://github.com/tyrasd/togpx">togpx</a>.</p>
-  <div class="form-group">
-    <input type="file" id="inputFile">
-    <p class="help-block">Browse for your GeoJSON file.</p>
-  </div>
+  <textarea id="geojsonText" class="form-control"></textarea>
   <button class="btn btn-default" onclick="convertFile();" type="submit" id="submit">Convert File</button>
   <p>6:26 pm</p>
 </div>
