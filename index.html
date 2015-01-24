@@ -16,12 +16,7 @@ function convertFile() {
   var inputFile = document.getElementById("inputFile").value;
   console.log(inputFile);
   
-  var GeoJSON_Data;
-  
-  $.getJSON(inputFile, function(response){
-     GeoJSON_Data = response;
-     console.log(GeoJSON_Data);
-  })
+  var inputData$.getJSON(inputFile);
   
   var gpxData = togpx(inputData);
   console.log(gpxData);
@@ -37,7 +32,7 @@ function convertFile() {
     <p class="help-block">Browse for your GeoJSON file.</p>
   </div>
   <button class="btn btn-default" onclick="convertFile();" type="submit" id="submit">Convert File</button>
-  <p>6:17 pm</p>
+  <p>6:25 pm</p>
 </div>
 
 </body>
