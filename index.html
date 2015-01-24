@@ -16,8 +16,20 @@
     <input type="file" id="inputFile">
     <p class="help-block">Browse for your GeoJSON file.</p>
   </div>
+  <input class="btn btn-default" type="submit" id="submit" value="Submit">
 </div>
 
 </body>
+
+<script>
+  
+  document.getElementById("submit").addEventListener("click", convertFile);
+  
+  function convertFile() {
+    var inputData = document.getElementById("inputFile");
+    console.log(inputData);
+  }
+  
+</script>
 
 </html>
