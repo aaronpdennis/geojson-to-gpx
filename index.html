@@ -16,15 +16,15 @@
     <input type="file" id="inputFile">
     <p class="help-block">Browse for your GeoJSON file.</p>
   </div>
-  <input class="btn btn-default" onclick="convertFile();" type="submit" id="submit" value="Submit">
-  <p>5:35 pm</p>
+  <button class="btn btn-default" onclick="convertFile();" type="submit" id="submit">Convert File</button>
+  <p>5:37 pm</p>
 </div>
 
 </body>
 
 <script>
   
-  var convertFile = function() {
+  convertFile = function() {
     var inputData = document.getElementById("inputFile").value();
     console.log(inputData);
   }
