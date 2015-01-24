@@ -5,7 +5,6 @@
   <title>GeoJSON to GPX</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <script src='togpx.js'></script>
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +15,7 @@ function convertFile() {
   var inputDataString = document.getElementById("geojsonText").value;
   console.log(inputDataString);
   
-  var inputData = $.getJSON(inputDataString);
+  var inputData = JSON.parse(inputDataString);
   
   var gpxData = togpx(inputData);
   console.log(gpxData);
