@@ -19,6 +19,8 @@ function convertData() {
   
   var gpxData = togpx(inputData);
   console.log(gpxData);
+  
+  document.getElementById("gpxXML").value = gpxData;
 }
   
 </script>
@@ -26,10 +28,11 @@ function convertData() {
 <div class="container">
   <h1>Convert GeoJSON to GPX</h1>
   <p>Converts GeoJSON data to a string of GPX XML. Paste in GeoJSON data below, then click "Convert to GPX".</p>
-  <textarea id="geojsonText" class="form-control" style="height:500px"></textarea>
+  <textarea id="geojsonText" class="form-control" style="height:300px;font-family:monospace;color:red;"></textarea>
   <button class="btn btn-default" onclick="convertData();" type="submit" id="submit">Convert to GPX</button>
   <p>Built with <a href="https://github.com/tyrasd/togpx">togpx</a>.</p>
-  <p>6:59 pm</p>
+   <textarea id="gpxXML" class="form-control" style="height:300px;font-family:monospace;color:blue;"></textarea>
+  <p>7:06 pm</p>
 </div>
 
 </body>
